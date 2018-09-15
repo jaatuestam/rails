@@ -32,6 +32,12 @@
 		{
 			"name": "consulta de usuarios",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTM3MDQyNzIwLCJleHAiOjE1MzcwNDYzMjAsImp0aSI6ImI1ZTFmZTZhLTQ5OTgtNGIwMi1iMDUwLTU5MDdjODdiODdmOCJ9.-Vo9VnirToX_rtl_8E4pr9D5Wnh4SxMi-fiTc7vHWGg"
+					}
+				},
 				"method": "GET",
 				"header": [],
 				"body": {},
