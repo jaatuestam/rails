@@ -1,6 +1,7 @@
 class CursosController < ApplicationController
-  before_action :set_curso, only: [:show, :edit, :update, :destroy]
+  #before_action :set_curso, only: [:show, :edit, :update, :destroy]
   #before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /cursos
   # GET /cursos.json
@@ -28,6 +29,7 @@ class CursosController < ApplicationController
   def create
     @curso = Curso.new(curso_params)
 
+    puts "usuario actual #{current_user.id}"
     @curso.user_id = current_user.id
 
     respond_to do |format|
@@ -73,6 +75,7 @@ class CursosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def curso_params
+      puts "usuario actual #{current_user.id}"
       params.require(:curso).permit(:titulo, :lugar)
     end
 end

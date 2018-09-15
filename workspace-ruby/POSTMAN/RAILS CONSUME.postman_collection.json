@@ -73,6 +73,46 @@
 				"url": "http://localhost:3000/api/v1/users.json"
 			},
 			"response": []
+		},
+		{
+			"name": "consulta de cursos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTM3MDQyNzIwLCJleHAiOjE1MzcwNDYzMjAsImp0aSI6ImI1ZTFmZTZhLTQ5OTgtNGIwMi1iMDUwLTU5MDdjODdiODdmOCJ9.-Vo9VnirToX_rtl_8E4pr9D5Wnh4SxMi-fiTc7vHWGg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "http://localhost:3000/cursos.json"
+			},
+			"response": []
+		},
+		{
+			"name": "creacion de cursos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTM3MDQyNzIwLCJleHAiOjE1MzcwNDYzMjAsImp0aSI6ImI1ZTFmZTZhLTQ5OTgtNGIwMi1iMDUwLTU5MDdjODdiODdmOCJ9.-Vo9VnirToX_rtl_8E4pr9D5Wnh4SxMi-fiTc7vHWGg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \n        \"titulo\": \"Curso 88sss8\",\n        \"lugar\": \"Centro\"\n        \n    }"
+				},
+				"url": "http://localhost:3000/cursos.json"
+			},
+			"response": []
 		}
 	]
 }
