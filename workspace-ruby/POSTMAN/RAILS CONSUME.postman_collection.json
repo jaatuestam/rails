@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "6c264584-b92a-4c89-922f-cb4b7658af74",
+		"name": "RAILS CONSUME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "creacion del token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "usuario1@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/v1/authentication_tokens/create"
+			},
+			"response": []
+		},
+		{
+			"name": "consulta de usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "http://localhost:3000/api/v1/users.json"
+			},
+			"response": []
+		},
+		{
+			"name": "creacion de usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "usuario3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/v1/users.json"
+			},
+			"response": []
+		}
+	]
+}
